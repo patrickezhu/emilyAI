@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <textarea id="textInput" rows="50" cols="50" placeholder="Enter your student data here, with each row in the format '12345678  smith  john' (you can just copy and paste directly from the spreadsheet and it'll be formatted right)"></textarea>
+    <button onclick="processInput()">Process Student Data</button>
+
+
+    <textarea id="dataInput" rows="50" cols="50" placeholder="Enter names of students as appearing in the seating, with each row consisting of 'john smith'. If the row is not a first/last name pairing, does not appear in the above student data, or is empty, the output will skip a line as to keep the column correct"></textarea>
+    <button onclick="mapNamesToIDs()">Map Names to IDs</button>
+    <p>Copy this output and paste it directly into your sheet!:</p>
+    <textarea id="output" rows="50" cols="50" readonly></textarea>
+    
+    <script src="script.js"></script>
+</body>
+</html>
