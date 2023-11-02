@@ -29,7 +29,7 @@ function mapNamesToIDs() {
             str = "0" + str;
         }
         if(nameToID[trimmedName]) {
-            outputText += str + "\n";
+            outputText += "\'" + str + "\n";
         } else {
             outputText += "\n";
         }
