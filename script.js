@@ -24,8 +24,12 @@ function mapNamesToIDs() {
 
     for(let name of names) {
         let trimmedName = name.trim();  // Remove any surrounding whitespace
+        var str = "" + nameToID[trimmedName];
+        while (str.length < 8) {
+            str = "0" + str;
+        }
         if(nameToID[trimmedName]) {
-            outputText += nameToID[trimmedName] + "\n";
+            outputText += str + "\n";
         } else {
             outputText += "\n";
         }
