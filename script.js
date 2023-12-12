@@ -7,9 +7,18 @@ function processInput() {
         if(parts.length === 3) {
             let id = parts[0];
             let fullName = parts[2] + " " + parts[1]; // "first last"
+            if(fullName in nameToID) {
+                if (nameToID[fullName] != id) {
+                    // console.log('DUPLICATE DETECTED; ' + fullName + ' old:' + nameToID[fullName] + ' new:' + id);
+                    nameToID[fullName] = '';
+                    continue;
+                }
+            }
+
             nameToID[fullName] = id;
         }
     }
+    // console.log('DICK AND BALLS');
 }
 
 function mapNamesToIDs() {
